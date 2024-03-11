@@ -17,6 +17,7 @@ RUN wget https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.4.3-linux-x
     && rm dorado-0.4.3-linux-x64.tar.gz \
     && mv dorado-0.4.3-linux-x64 dorado
 
+
 ENV PATH="/opt/dorado/bin:${PATH}"
 
 CMD ["dorado"]
