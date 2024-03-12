@@ -1,4 +1,4 @@
-FROM rockylinux/rockylinux:9
+FROM nvidia/cuda:12.3.2-cudnn9-runtime-rockylinux9
 
 RUN dnf install -y \
     python3 \
