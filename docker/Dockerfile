@@ -10,12 +10,15 @@ RUN dnf install -y \
 
 RUN pip3 install --upgrade pip
 
+# Specify the version of the ONT Dorado software to install
+ENV DORADO_VERSION=0.5.3
+
 WORKDIR /opt
 
-RUN wget https://cdn.oxfordnanoportal.com/software/analysis/dorado-0.4.3-linux-x64.tar.gz \
-    && tar -xzf dorado-0.4.3-linux-x64.tar.gz \
-    && rm dorado-0.4.3-linux-x64.tar.gz \
-    && mv dorado-0.4.3-linux-x64 dorado
+RUN wget https://cdn.oxfordnanoportal.com/software/analysis/dorado-${DORADO_VERSION}-linux-x64.tar.gz \
+    && tar -xzf dorado-${DORADO_VERSION}-linux-x64.tar.gz \
+    && rm dorado-${DORADO_VERSION}-linux-x64.tar.gz \
+    && mv dorado-${DORADO_VERSION}-linux-x64 dorado
 
 
 ENV PATH="/opt/dorado/bin:${PATH}"
