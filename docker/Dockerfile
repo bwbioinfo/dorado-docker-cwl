@@ -11,7 +11,7 @@ RUN dnf install -y \
 RUN pip3 install --upgrade pip
 
 # Specify the version of the ONT Dorado software to install
-ENV DORADO_VERSION=0.5.3
+ENV DORADO_VERSION=0.7.2
 
 WORKDIR /opt
 
